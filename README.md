@@ -67,8 +67,8 @@ The goal of this assignment was to construct a DQN to play the environments of C
 python3 -m src.cartpole.cartpole_dqn    # Runs DQN for Cartpole-v1
 python3 -m src.mspacman.mspacman_dqn    # Runs DQN for MsPacman-v5
 ```
-4. [WARNING] Training can take some time, especially for the MsPacman environment. On a single GPU card, 7,000 episodes can take 3-4 hours. As such, the use of a terminal multiplexer, Tmux, is highly encouraged especially when running on a remote server. To create a new Tmux, `tmux new -s dqn-cartpole` and `tmux new -s dqn-pacman` to run both models simultaneously. Then, run `tmux attach -t dqn-cartpole` and `tmux attach -t dqn-pacman` to enter these terminals and run the corresponding scripts using the commands from step 3.
-5. Model weights, logs, and associated outputs are stored in `output` under each respective path for a given environment under `src`, reference [directory](#directory-structure) for more information.
+4. [WARNING] Training can take some time, especially for the MsPacman environment. On a single GPU card, 7,000 episodes can take 3-4 hours. As such, the use of a terminal multiplexer, Tmux, is highly encouraged especially when running on a remote server. To create a new Tmux, `tmux new -s dqn-cartpole` and `tmux new -s dqn-pacman` to run both models simultaneously. Then, run `tmux attach -t dqn-cartpole` and `tmux attach -t dqn-pacman` to enter these terminals. Inside each window, you may now run the corresponding scripts using the commands from step 3.
+5. Model weights, logs, and associated outputs are stored in `output` under the path for a given environment; to be found under `src`, reference [directory](#directory-structure) for more information.
 
 ## Instructions for running Validation Tests
 1. Ensure that `run_validations.sh` has appropriate permissions: `chmod +x scripts/run_validations.sh`.
