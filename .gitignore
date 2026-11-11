@@ -1,0 +1,54 @@
+activate.txt
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Editor and temporary files
+*.swp
+*.swo
+*~
+.nfs*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build and test artifacts
+build/
+dist/
+.pytest_cache/
+.coverage
+
+# Local configuration
+# config.local.yaml
+
+# Model files
+models/
+*.pt
+
+# Logs
+/logs
+/validation_output
+
+# Outputs
+output/
+
+# Extraneous imgs
+imgs/

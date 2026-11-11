@@ -1,0 +1,12 @@
+pandas
+numpy
+gymnasium
+gymnasium[atari,accept-rom-license]
+openai
+torch
+torchvision
+matplotlib
+seaborn
+pyyaml
+ipykernel
+tqdm
