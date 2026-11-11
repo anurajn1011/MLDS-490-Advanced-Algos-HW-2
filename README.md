@@ -62,7 +62,7 @@ The goal of this assignment was to construct a DQN to play the environments of C
 ## Instructions for running DQN models.
 1. The following instructions should be run from the base of this directory. 
 2. You can modify the hyperparameters for training by editing the parameters in the `main()` method in the respective files `src/cartpole/cartpole_dqn `, `src/mspacman/mspacman_dqn`. 
-3. To run the models, execute the following command: 
+3. To run the models, execute the following commands: 
 ``` 
 python3 -m src.cartpole.cartpole_dqn    # Runs DQN for Cartpole-v1
 python3 -m src.mspacman.mspacman_dqn    # Runs DQN for MsPacman-v5
