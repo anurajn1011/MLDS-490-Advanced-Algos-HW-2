@@ -7,7 +7,8 @@ Edge cases and validation runs for MsPacman-v5.
 import sys
 from pathlib import Path
 import numpy as np, torch, torch.nn.functional as F, gymnasium as gym, ale_py
-import matplotlib; matplotlib.use("Agg")
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -24,7 +25,8 @@ LIFE_LOSS_TERMINAL = True # We count losing a life as a terminal state, as we di
 RUN_SLOW = True # V4 takes about 2 to 4 minutes on a GPU
 CKPT = Path("src/mspacman/output/pacman_dqn_final_run_1.pt") # modify for correct path
 TARGET_PT = Path("src/mspacman/output/pacman_dqn_run_1.pt") # modify for correct path
-FIG = Path("figures"); FIG.mkdir(exist_ok=True)
+FIG = Path("figures")
+FIG.mkdir(exist_ok=True)
 pre = lambda o: preprocess_observation(o.copy())[:, :, 0]
 T = lambda x: torch.as_tensor(x, device=device)
 
@@ -143,7 +145,8 @@ def p6_preprocessing(net):
     """Raw vs. pre-processed frames, including 15 steps after power pellet."""
     section("P6 CAN PREPROCESSING STILL SEPARATE PAC-MAN, GHOSTS, PELLETS, BLUE GHOSTS?")
     env, stack = make(), FrameStack(4)
-    s = stack.reset(pre(env.reset(seed=0)[0])); shots, t, pellet, over = {}, 0, None, False
+    s = stack.reset(pre(env.reset(seed=0)[0]))
+    shots, t, pellet, over = {}, 0, None, False
     while not over and t < 3000:
         with torch.no_grad():
             a = net(T(s)[None]).argmax().item()
@@ -161,7 +164,8 @@ def p6_preprocessing(net):
         ax[0, k].set_title(f"raw: {name}")
         ax[1, k].imshow(pre(o), cmap="gray")
         ax[1, k].set_title("preprocessed")
-        ax[0, k].axis("off"); ax[1, k].axis("off")
+        ax[0, k].axis("off")
+        ax[1, k].axis("off")
     plt.tight_layout()
     plt.savefig(FIG / "p6_preprocessing.png", dpi=150)
     plt.close()

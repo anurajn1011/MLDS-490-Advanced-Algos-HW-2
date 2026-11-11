@@ -9,4 +9,7 @@ matplotlib
 seaborn
 pyyaml
 ipykernel
+jupyter
+lab
+notebook
 tqdm
